@@ -20,9 +20,9 @@ end
 
 function _M.mylog(...)
     local arg = {...}
-    local file = io.open("D:/work/flutterpy.txt", "a")
+    local file = io.open(rime_api:get_user_data_dir() .. '/flutterpy_user/flutterpy_log.txt', 'a')
     io.output(file)
-    io.write(os.date("%Y-%m-%d %H:%M:%S",os.time()), '\n')
+    io.write(os.date('%Y-%m-%d %H:%M:%S',os.time()), '\n')
     for i, v in ipairs(arg) do
         table_printed = {}
         _M.print_table_item(i, v, 0)

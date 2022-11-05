@@ -66,7 +66,7 @@ _M.killer_filter = {
         -- 按候选项权重排序
         table.sort(cand_output, function(a,b) return a.quality > b.quality end)
         for i, v in ipairs(cand_output) do
-            v:get_genuine().comment = v.comment .. ' ' .. v.type .. ' ' .. tostring(v.quality) .. ' '
+            -- v:get_genuine().comment = v.comment .. ' ' .. v.type .. ' ' .. tostring(v.quality) .. ' '
             yield(v)
         end
     end,
