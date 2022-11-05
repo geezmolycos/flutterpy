@@ -4,7 +4,7 @@
 schema:
   schema_id: flutterpy
   name: 小蝶音形
-  version: "1.0.0-dev"
+  version: "1.1.0-dev"
   author:
     - 小鹤音形方案设计：何海峰 <flypy@qq.com>
     - 小蝶特性修改、魔改：金毛 <djy0212@foxmail.com>
@@ -107,7 +107,9 @@ engine:
     - table_translator@flypy_top
     - table_translator@flypy_user
     - table_translator@flypy_full
-    - table_translator@flutterpy_user
+    - table_translator@flutterpy_prepend
+    - table_translator@flutterpy_append
+    - table_translator@flutterpy_override
     - reverse_lookup_translator
     - lua_translator@flutterpy_calculator_translator
     - lua_translator@flutterpy_symbol_translator@flutterpy_symbol
@@ -211,7 +213,7 @@ translator:
   enable_sentence: false
   enable_completion: false # 编码提示开关
   enable_user_dict: false
-  initial_quality: -20000
+  initial_quality: -200000
 
 reverse_lookup:
   dictionary: flypydz
@@ -224,7 +226,7 @@ flypy_top:
   db_class: stabledb
   enable_sentence: false
   enable_completion: false
-  initial_quality: -19999 #用户词和系统词重码 置顶
+  initial_quality: -199999 #用户词和系统词重码 置顶
   
 flypy_sys:
   dictionary: ""
@@ -232,7 +234,7 @@ flypy_sys:
   db_class: stabledb
   enable_sentence: false
   enable_completion: false
-  initial_quality: -40001 #本表词和系统词重码居后
+  initial_quality: -400001 #本表词和系统词重码居后
 
 flypy_user:
   dictionary: ""
@@ -240,7 +242,7 @@ flypy_user:
   db_class: stabledb
   enable_sentence: false
   enable_completion: false
-  initial_quality: -20001 #用户词和系统词重码居后
+  initial_quality: -200001 #用户词和系统词重码居后
   
 flypy_full:
   dictionary: ""
@@ -248,13 +250,28 @@ flypy_full:
   db_class: stabledb
   enable_sentence: false
   enable_completion: false
-  initial_quality: -20001 #和系统词重码时居后
+  initial_quality: -200001 #和系统词重码时居后
 
-flutterpy_user:
+flutterpy_prepend:
   dictionary: ""
-  user_dict: flutterpy_user
+  user_dict: flutterpy_user/flutterpy_prepend
+  db_class: stabledb
+  enable_sentence: false
+  enable_completion: false
+  initial_quality: 1
+
+flutterpy_append:
+  dictionary: ""
+  user_dict: flutterpy_user/flutterpy_append
   db_class: stabledb
   enable_sentence: false
   enable_completion: false
   initial_quality: -1 #和系统词重码时居后
 
+flutterpy_override:
+  dictionary: ""
+  user_dict: flutterpy_user/flutterpy_override
+  db_class: stabledb
+  enable_sentence: false
+  enable_completion: false
+  initial_quality: 100000

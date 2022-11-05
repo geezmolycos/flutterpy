@@ -1,2 +1,17 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: flutterpy
+  name: 小蝶音形
+  version: "1.1.0-dev"
+  author:
+    - 小鹤音形方案设计：何海峰 <flypy@qq.com>
+    - 小蝶特性修改、魔改：金毛 <djy0212@foxmail.com>
+  description: |
+    小蝶音形输入法，小鹤音形的魔改版，兼容小鹤码表和用户码表，采用lua添加个人喜好的功能。
+  dependencies:
+    - flypy
+
 __include: flutterpy_data/flutterpy.schema:/
 __patch: flutterpy_user/flutterpy.custom:/patch?
