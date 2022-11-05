@@ -1,4 +1,3 @@
-# Rime schema settings
 # encoding: utf-8
 
 # 对应小鹤版本 10.9.1
@@ -9,8 +8,8 @@
 # TODO:
 # 写说明和注释
 # 制作符号集和变换器
-# 编写更清晰的lua segmentor, 替换自带的matcher
 # 制作无候选窗模式
+# 编写更清晰的lua segmentor, 替换自带的matcher（能用就先不做
 # 制作繁体和异体字码表（没有人用就不做
 # 适配其他输入方案，例如明月拼音（没有人用就不做
 

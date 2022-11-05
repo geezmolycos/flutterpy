@@ -7,9 +7,9 @@ schema:
   version: "1.1.0-dev"
   author:
     - 小鹤音形方案设计：何海峰 <flypy@qq.com>
-    - 小蝶特性修改、魔改：金毛 <djy0212@foxmail.com>
+    - 小蝶音形魔改：金毛 <djy0212@foxmail.com>
   description: |
-    小蝶音形输入法，小鹤音形的魔改版，兼容小鹤码表和用户码表，采用lua添加个人喜好的功能。
+    小蝶音形输入方案，小鹤音形的魔改版。与小鹤输入方案共存，兼容小鹤的用户词典。采用lua添加个人喜好的功能。
   dependencies:
     - flypy
 
