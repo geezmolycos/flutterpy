@@ -108,13 +108,13 @@ speller:
   #auto_clear: max_length #manual|auto|max_length 空码按下一键确认清屏|空码自动清|达到最长码时后码顶上清屏
 
 punctuator:
-  import_preset: flutterpy_data/flutterpy_punctuation
+  __include: flutterpy_data/punctuation:/
+  __patch: flutterpy_user/punctuation.custom:/patch?
 
 flutterpy_symbol:
   symbol_table:
-    '-':
-      n: {s: 'baqi', cap: 'ba'}
-      m: {s: 'qiba', cap: 'qi'}
+    __include: flutterpy_data/symbol:/
+    __patch: flutterpy_user/symbol.custom:/patch?
   single_pattern: '^;([!"#$%%&''()*+,%-./:<=>?@%[\%]^_`{|}~]+)([^!"#$%%&''()*+,%-./:;<=>?@%[\%]^_`{|}~]?)'
   multiple_pattern: '^;([!"#$%%&''()*+,%-./:<=>?@%[\%]^_`{|}~]+);([^!"#$%%&''()*+,%-./:;<=>?@%[\%]^_`{|}~]*)(;?)'
 

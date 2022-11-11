@@ -1,0 +1,55 @@
+# encoding: utf-8
+# Flutterpy 方案配置文件
+
+'-':
+  s: {s: "\u00ad", cap: 'Sh'} # 软连字符
+  h: {s: "\u2010", cap: 'Hy'} # 连字符
+  j: {s: "\u2011", cap: 'Nb'} # 不间断连字符
+  f: {s: "\u2012", cap: 'Fg'} # 数字横线(figure dash)
+  n: {s: "\u2013", cap: '- '} # en 横线
+  m: {s: "\u2014", cap: '--'} # em 横线
+  b: {s: "\u2015", cap: 'Hb'} # horizontal bar
+  u: {s: "\u2212", cap: 'Mn'} # 减号
+  q: {s: "\u207b", cap: '^^'} # 上标
+  a: {s: "\u208b", cap: 'vv'} # 下标
+  e: {s: "\ufe58", cap: 'se'}
+  r: {s: "\ufe63", cap: 'sh'}
+  z: {s: "\uff0d", cap: 'fw'} # 全角
+  x: {s: "\u0335", cap: 'os'} # 组合字符
+  c: {s: "\u0336", cap: 'ol'} # 组合字符
+  1: {s: "\u2013", cap: '- '}
+  2: {s: "\u2014", cap: '--'}
+  4: {s: "\u2e3a", cap: '2-'} # 2 em
+  6: {s: "\u2e3b", cap: '3-'} # 3 em
+
+'_':
+  s: {s: "\ufe4d", cap: '--'} # 虚线
+  d: {s: "\ufe4f", cap: '~~'} # 波浪线
+  f: {s: "\u2017", cap: '=='} # 双横线
+  g: {s: "\ufe4e", cap: '*-'} # 点划线
+  z: {s: "\uff3f", cap: 'fw'} # 全角
+  x: {s: "\u0331", cap: 'os'} # 组合字符
+  c: {s: "\u0332", cap: 'ol'} # 组合字符
+  v: {s: "\u0333", cap: 'od'} # 组合字符
+  1: {s: "\u2003", cap: '__'} # em space
+  2: {s: "\u2002", cap: '_ '} # en space
+  3: {s: "\u2004", cap: '/3'} # em/3
+  4: {s: "\u2005", cap: '/4'} # em/4
+  6: {s: "\u2006", cap: '/6'} # em/6
+  #q: {s: "\u2001", cap: '__'} # em quad
+  #w: {s: "\u2000", cap: '_ '} # en quad
+  f: {s: "\u2007", cap: 'Fg'} # 数字空格 figure space
+  p: {s: "\u2008", cap: 'Pt'} # 标点空格 punctuation space
+  5: {s: "\u2009", cap: 'Th'} # thin space
+  7: {s: "\u200a", cap: 'Hr'} # hair space
+  8: {s: "\u00a0", cap: 'Nb'} # 不间断空格(nbsp)
+  9: {s: "\u202f", cap: 'Nn'} # 窄不间断空格
+  0: {s: "\u200b", cap: 'Zw'} # 零宽空格
+  y: {s: "\u200c", cap: 'Zn'} # zwnj
+  u: {s: "\u200d", cap: 'Zj'} # zwj
+  i: {s: "\u2060", cap: 'Wj'} # word joiner
+  o: {s: "\ufeff", cap: 'Bm'} # 零宽不间断空格，即byte-order mark
+  e: {s: "\u205f", cap: 'Ma'} # 数学空格
+  q: {s: "\u3000", cap: 'Fw'} # 全角空格
+
+
