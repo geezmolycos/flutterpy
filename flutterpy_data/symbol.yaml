@@ -38,7 +38,7 @@
   6: {s: "\u2006", cap: '/6'} # em/6
   #q: {s: "\u2001", cap: '__'} # em quad
   #w: {s: "\u2000", cap: '_ '} # en quad
-  f: {s: "\u2007", cap: 'Fg'} # 数字空格 figure space
+  l: {s: "\u2007", cap: 'Fg'} # 数字空格 figure space
   p: {s: "\u2008", cap: 'Pt'} # 标点空格 punctuation space
   5: {s: "\u2009", cap: 'Th'} # thin space
   7: {s: "\u200a", cap: 'Hr'} # hair space
