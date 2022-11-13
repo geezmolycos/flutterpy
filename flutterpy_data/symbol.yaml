@@ -52,4 +52,57 @@
   e: {s: "\u205f", cap: 'Ma'} # 数学空格
   q: {s: "\u3000", cap: 'Fw'} # 全角空格
 
+'!':
+  i: {s: "\u00a1", cap: "\u00a1 "} # 反感叹号
 
+'$':
+  _use_upper: true
+  c: {s: "\u00a2", cap: "\u00a2 "} # 美分符号
+  p: {s: "\u00a3", cap: "\u00a3 "} # 英镑符号
+  o: {s: "\u00a4", cap: "\u00a4 "} # 货币符号
+  Y: {s: "\u00a5", cap: "\u00a5 "} # 人民币/日元
+  E: {s: "\u20a0", cap: "\u20a0 "} # euro-currency sign
+  V: {s: "\u20a1", cap: "\u20a1 "} # colon sign
+  v: {s: "\u20a2", cap: "\u20a2 "} # cruzeiro sign
+  F: {s: "\u20a3", cap: "\u20a3 "} # french franc sign
+  l: {s: "\u20a4", cap: "\u20a4 "} # lira sign
+  m: {s: "\u20a5", cap: "\u20a5 "} # mill sign
+  N: {s: "\u20a6", cap: "\u20a6 "} # naira sign
+  P: {s: "\u20a7", cap: "\u20a7 "} # peseta sign
+  R: {s: "\u20a8", cap: "\u20a8 "} # rupee sign
+  W: {s: "\u20a9", cap: "\u20a9 "} # won sign
+  s: {s: "\u20aa", cap: "\u20aa "} # new sheqel sign
+  d: {s: "\u20ab", cap: "\u20ab "} # dong sign
+  C: {s: "\u20ac", cap: "\u20ac "} # euro sign
+  K: {s: "\u20ad", cap: "\u20ad "} # kip sign
+  T: {s: "\u20ae", cap: "\u20ae "} # tugrik sign
+  D: {s: "\u20af", cap: "\u20af "} # drachma sign
+  g: {s: "\u20b0", cap: "\u20b0 "} # german penny sign
+  0: {s: "\u20b1", cap: "\u20b1 "} # peso sign
+  G: {s: "\u20b2", cap: "\u20b2 "} # guarani sign
+  A: {s: "\u20b3", cap: "\u20b3 "} # austral sign
+  S: {s: "\u20b4", cap: "\u20b4 "} # hryvnia
+  z: {s: "\u20b5", cap: "\u20b5 "} # cedi
+  L: {s: "\u20b6", cap: "\u20b6 "} # livre tournois
+  M: {s: "\u20b7", cap: "\u20b7 "} # spesmilo
+  t: {s: "\u20b8", cap: "\u20b8 "} # tenge
+  r: {s: "\u20b9", cap: "\u20b9 "} # indian rupee
+  k: {s: "\u20ba", cap: "\u20ba "} # turkish lira
+  X: {s: "\u20bb", cap: "\u20bb "} # nordic mark
+  N: {s: "\u20bc", cap: "\u20bc "} # manat sign
+  9: {s: "\u20bd", cap: "\u20bd "} # ruble sign
+  x: {s: "\u20be", cap: "\u20be "} # lari sign
+  B: {s: "\u20bf", cap: "\u20bf "} # bitcoin sign
+  
+  8: {s: "\u00a7", cap: "\u00a7 "} # 段落号
+  
+
+'|':
+  b: {s: "\u00a6", cap: "\u00a6 "} # 断开的竖线
+
+'"':
+  d: {s: "\u00a8", cap: "\u00a8 "} # 分音符
+
+'@':
+  c: {s: "\u00a9", cap: "\u00a9 "} # 版权符号
+  r: {s: "\u00ae", cap: "\u00ae "} # 注册商标符号
