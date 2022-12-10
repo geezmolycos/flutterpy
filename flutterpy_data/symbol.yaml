@@ -27,6 +27,7 @@
   d: {s: "\ufe4f", cap: '~~'} # 波浪线
   f: {s: "\u2017", cap: '=='} # 双横线
   g: {s: "\ufe4e", cap: '*-'} # 点划线
+  m: {s: "\u00af", cap: "\u00af "} # 上划线(macron)
   z: {s: "\uff3f", cap: 'fw'} # 全角
   x: {s: "\u0331", cap: 'os'} # 组合字符
   c: {s: "\u0332", cap: 'ol'} # 组合字符
@@ -54,6 +55,7 @@
 
 '!':
   i: {s: "\u00a1", cap: "\u00a1 "} # 反感叹号
+  n: {s: "\u00ac", cap: "\u00ac "} # 逻辑非
 
 '$':
   _use_upper: false
@@ -70,7 +72,8 @@
   l: {s: "\u20bd", cap: "\u20bd "} # ruble sign
   b: {s: "\u20bf", cap: "\u20bf "} # bitcoin sign
   
-  s: {s: "\u00a7", cap: "\u00a7 "} # 段落号
+  s: {s: "\u00a7", cap: "\u00a7 "} # 分节符号
+  a: {s: "\u00b6", cap: "\u00b6 "} # 段落号
   
 
 '|':
@@ -82,3 +85,27 @@
 '@':
   c: {s: "\u00a9", cap: "\u00a9 "} # 版权符号
   r: {s: "\u00ae", cap: "\u00ae "} # 注册商标符号
+
+'<':
+  q: {s: "\u00ab", cap: "\u00ab "} # 尖引号
+  
+'>':
+  q: {s: "\u00bb", cap: "\u00bb "} # 尖引号
+
+'''':
+  d: {s: "\u00b0", cap: "\u00b0 "} # 度符号
+  
+
+'+':
+  m: {s: "\u00b1", cap: "\u00b1 "} # 正负号
+  
+
+'`':
+  a: {s: "\u00b4", cap: "\u00b4 "} # acute accent （尖音符）
+  c: {s: "\u00b8", cap: "\u00b8 "} # cedilla
+
+'.':
+  m: {s: "\u00b7", cap: "\u00b7 "} # middle dot
+
+'?':
+  i: {s: "\u00bf", cap: "\u00bf "} # 反问号
