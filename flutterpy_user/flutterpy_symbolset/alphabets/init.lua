@@ -1,12 +1,53 @@
 
 local mylog = require('flutterpy.utils').mylog
+local logcall = require('flutterpy.utils').logcall
+local lower_symbol_hint = require('flutterpy.symbol').lower_symbol_hint
+local upper_symbol_hint = require('flutterpy.symbol').upper_symbol_hint
+
+return logcall(function()
 
 local _M = {}
 
+local function generate_symbolset_with_combined_table(combined_table, pad_hint)
+    -- generate keyboard hint
+
+    local hint_table = {}
+    for modifier, inner_table in pairs(combined_table) do
+        local group_table_as_input = {}
+        for key, char in pairs(inner_table) do
+            group_table_as_input[key] = {cap = char .. (pad_hint and ' ' or '')}
+        end
+        local lower_hint = lower_symbol_hint(group_table_as_input)
+        local upper_hint = upper_symbol_hint(group_table_as_input)
+        hint_table[modifier] = {lower_hint, upper_hint}
+    end
+
+    return function(env, name, label)
+        local result = ''
+        local modifier = ''
+        for i = 1, string.len(label) do
+            local ch = string.sub(label, i, i)
+            if modifier == '' and combined_table[ch] then
+                modifier = ch
+            else
+                local output = combined_table[modifier][ch]
+                if output then
+                    result = result .. output
+                else
+                    result = result .. ch
+                end
+                modifier = ''
+            end
+        end
+        return {{result, ''}, {'', hint_table[modifier][1] or ''}, {'', hint_table[modifier][2] or ''}}
+    end
+end
+
 -- 希腊字母
 -- 布局来源：https://www.branah.com/greek
-_M.xl = {
-    combined_alphabet_table = {
+_M.x = {
+
+    func = generate_symbolset_with_combined_table({
         [''] = {
             A = 'Α', a = 'α',
             B = 'Β', b = 'β',
@@ -59,28 +100,61 @@ _M.xl = {
             W = '΅',
             y = 'ΰ',
         },
-    },
-
-    func = function (env, name, label)
-        local result = ''
-        local modifier = ''
-        for i = 1, string.len(label) do
-            local ch = string.sub(label, i, i)
-            if modifier == '' and _M.xl.combined_alphabet_table[ch] then
-                modifier = ch
-            else
-                local output = _M.xl.combined_alphabet_table[modifier][ch]
-                if output then
-                    result = result .. output
-                else
-                    result = result .. ch
-                end
-                modifier = ''
-            end
-        end
-        return {{result, ''}}
-    end,
+    }, true),
     desc = '希腊'
 }
 
+-- 俄语西里尔字母
+_M.e = {
+
+    func = generate_symbolset_with_combined_table({
+        [''] = {
+            A = 'Ф', a = 'ф',
+            B = 'И', b = 'и',
+            C = 'С', c = 'с',
+            D = 'В', d = 'в',
+            E = 'У', e = 'у',
+            F = 'А', f = 'а',
+            G = 'П', g = 'п',
+            H = 'Р', h = 'р',
+            I = 'Ш', i = 'ш',
+            J = 'О', j = 'о',
+            K = 'Л', k = 'л',
+            L = 'Д', l = 'д',
+            M = 'Ь', m = 'ь',
+            N = 'Т', n = 'т',
+            O = 'Щ', o = 'щ',
+            P = 'З', p = 'з',
+            Q = 'Й', q = 'й',
+            R = 'К', r = 'к',
+            S = 'Ы', s = 'ы',
+            T = 'Е', t = 'е',
+            U = 'Г', u = 'г',
+            V = 'М', v = 'м',
+            W = 'Ц', w = 'ц',
+            X = 'Ч', x = 'ч',
+            Y = 'Н', y = 'н',
+            Z = 'Я', z = 'я',
+            ['['] = 'х',
+            ['{'] = 'Х',
+            [']'] = 'ъ',
+            ['}'] = 'Ъ',
+            ['\\'] = 'ж',
+            ['|'] = 'Ж',
+            ["'"] = 'э',
+            ['"'] = 'Э',
+            [','] = 'б',
+            ['<'] = 'Б',
+            ['.'] = 'ю',
+            ['>'] = 'Ю',
+            ['/'] = 'ё',
+            ['?'] = 'Ё',
+        },
+    }
+    , true),
+    desc = '俄西'
+}
+
 return _M
+
+end)
