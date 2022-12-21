@@ -6,7 +6,7 @@ local load_configs = require('flutterpy.utils').load_configs
 
 local _M = {}
 
-function _M.symbol_hint(symbol_group_table, keys)
+function _M.symbol_hint(symbol_group_table, keys, key_padding, char_padding)
     local text = ''
     for i = 1, #keys do
         local c = string.sub(keys, i, i)
@@ -18,9 +18,9 @@ function _M.symbol_hint(symbol_group_table, keys)
             local symbol_defn = symbol_group_table[c]
             local keycap
             if not symbol_defn then
-                keycap = c .. '  '
+                keycap = c .. string.rep(' ', key_padding)
             else
-                keycap = symbol_defn.cap .. ' '
+                keycap = symbol_defn.cap .. string.rep(' ', char_padding)
             end
             text = text .. keycap
         end
@@ -29,11 +29,21 @@ function _M.symbol_hint(symbol_group_table, keys)
 end
 
 function _M.lower_symbol_hint(symbol_group_table)
-    return _M.symbol_hint(symbol_group_table, '1234567890\nqwertyuiop\n asdfghjkl\n  zxcvbnm');
+    return _M.symbol_hint(symbol_group_table, '1234567890\nqwertyuiop\n asdfghjkl\n  zxcvbnm', 2, 1)
 end
 
 function _M.upper_symbol_hint(symbol_group_table)
-    return _M.symbol_hint(symbol_group_table, '1234567890\nQWERTYUIOP\n ASDFGHJKL\n  ZXCVBNM');
+    return _M.symbol_hint(symbol_group_table, '!@#$%^&*()\nQWERTYUIOP\n ASDFGHJKL\n  ZXCVBNM', 2, 1)
+end
+
+function _M.layouted_symbol_hint(symbol_group_table, layout, upper, key_width, space_width)
+    local keys_str = ({
+        {'qwertyuiop\n asdfghjkl\n  zxcvbnm', 'QWERTYUIOP\n ASDFGHJKL\n  ZXCVBNM'},
+        {'1234567890\nqwertyuiop\n asdfghjkl\n  zxcvbnm', '!@#$%^&*()\nQWERTYUIOP\n ASDFGHJKL\n  ZXCVBNM'},
+        {"qwertyuiop[]\\\n asdfghjkl;'\n  zxcvbnm,./", 'QWERTYUIOP{}|\n ASDFGHJKL:"\n  ZXCVBNM<>?'},
+        {"`1234567890-=\nqwertyuiop[]\\\n asdfghjkl;'\n  zxcvbnm,./", '~!@#$%^&*()_+\nQWERTYUIOP{}|\n ASDFGHJKL:"\n  ZXCVBNM<>?'},
+    })[layout][upper and 2 or 1]
+    return _M.symbol_hint(symbol_group_table, keys_str, key_width + space_width - 1, space_width)
 end
 
 function _M.translate_string(s, symbol_group_table)

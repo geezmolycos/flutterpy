@@ -1,25 +1,22 @@
 
 local mylog = require('flutterpy.utils').mylog
 local logcall = require('flutterpy.utils').logcall
-local lower_symbol_hint = require('flutterpy.symbol').lower_symbol_hint
-local upper_symbol_hint = require('flutterpy.symbol').upper_symbol_hint
+local layouted_symbol_hint = require('flutterpy.symbol').layouted_symbol_hint
 
 return logcall(function()
 
 local _M = {}
 
-local function generate_symbolset_with_combined_table(combined_table, pad_hint)
+local function generate_symbolset_with_combined_table(combined_table, hint_function)
     -- generate keyboard hint
 
     local hint_table = {}
     for modifier, inner_table in pairs(combined_table) do
         local group_table_as_input = {}
         for key, char in pairs(inner_table) do
-            group_table_as_input[key] = {cap = char .. (pad_hint and ' ' or '')}
+            group_table_as_input[key] = {cap = char}
         end
-        local lower_hint = lower_symbol_hint(group_table_as_input)
-        local upper_hint = upper_symbol_hint(group_table_as_input)
-        hint_table[modifier] = {lower_hint, upper_hint}
+        hint_table[modifier] = hint_function(group_table_as_input)
     end
 
     return function(env, name, label)
@@ -100,7 +97,9 @@ _M.x = {
             W = '΅',
             y = 'ΰ',
         },
-    }, true),
+    }, function (group_table)
+        return {layouted_symbol_hint(group_table, 1, false, 1, 1), layouted_symbol_hint(group_table, 1, true, 1, 1)}
+    end),
     desc = '希腊'
 }
 
@@ -150,8 +149,9 @@ _M.e = {
             ['/'] = 'ё',
             ['?'] = 'Ё',
         },
-    }
-    , true),
+    }, function (group_table)
+        return {layouted_symbol_hint(group_table, 3, false, 1, 1)}
+    end),
     desc = '俄西'
 }
 
