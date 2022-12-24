@@ -1,2 +1,157 @@
 # coding: utf-8
+
+# 词语补充
+
 我哭	woku
+嗷呜	aowu
+红石	hsui
+辣鸡	laji
+模组	mozu
+喵呜	mnwu
+索尼	soni
+什么鬼	umgv
+事件	uijm
+音轨	ybgv
+音源	ybyr
+
+# 生僻和方言用字
+
+刌	ocyc
+泘	ohud
+嚱	oxik
+擓	okkf
+熥	otgh
+瞀	omus
+瞀乱	mulr
+㨃	odvf
+
+# 繁简异体
+
+牠	otan
+祂	otap
+矽	oxiu
+裡	olip
+醜	oizy
+隻	ovif
+後	ohzi
+乾	ogjv
+幹	ogju
+復	ofui
+複	ofup
+颳	ogxj
+祘	osre
+並	obkb
+併	obkr
+妳	onin
+貓	omcq
+豬	ovuu
+
+# 符号
+
+ㄦ	oer
+α	oalph
+β	obeta
+γ	ogamm
+λ	olamb
+π	opi
+τ	otau
+Σ	osigm
+
+# 表意文字组合符号
+
+⿰	ozh	100
+⿱	ozh	99
+⿲	ozh	98
+⿳	ozh	97
+⿴	ozh	96
+⿵	ozh	95
+⿶	ozh	94
+⿷	ozh	93
+⿸	ozh	92
+⿹	ozh	91
+⿺	ozh	90
+⿻	ozh	89
+
+# 颜文字
+
+(=・ω・=)	owo	100
+(｀・ω・´)	owo	99
+(⌒▽⌒)	owo	98
+（￣▽￣）	owo	97
+(〜￣△￣)〜	owo	96
+(･∀･)	owo	95
+(°∀°)ﾉ	owo	94
+(￣3￣)	owo	93
+╮(￣▽￣)╭	owo	92
+( ´_ゝ｀)	owo	91
+←_←	owo	90
+→_→	owo	89
+(<_<)	owo	88
+(>_>)	owo	87
+(;¬_¬)	owo	86
+("▔□▔)/	owo	85
+(ﾟДﾟ≡ﾟдﾟ)!?	owo	84
+Σ(ﾟдﾟ;)	owo	83
+Σ( ￣□￣||)	owo	82
+(´；ω；\`)	owo	81
+（/TДT)/	owo	80
+(^・ω・^ )	owo	79
+(｡･ω･｡)	owo	78
+(●￣(ｴ)￣●)	owo	77
+ε=ε=(ノ≧∇≦)	owo	76
+(´･_･\`)	owo	75
+(-_-#)	owo	74
+（￣へ￣）	owo	73
+(￣ε(#￣) Σ	owo	72
+ヽ(\`Д´)ﾉ	owo	71
+(╯°口°)╯(┴—┴	owo	70
+（#-_-)┯━┯	owo	69
+_(:3」∠)_	owo	68
+
+# 注音符号
+
+ㄅ	ovub
+ㄆ	ovup
+ㄇ	ovum
+ㄈ	ovuf
+ㄉ	ovud
+ㄊ	ovut
+ㄋ	ovun
+ㄌ	ovul
+ㄍ	ovug
+ㄎ	ovuk
+ㄏ	ovuh
+ㄐ	ovuj
+ㄓ	ovuv
+ㄔ	ovui
+ㄕ	ovuu
+ㄖ	ovur
+ㄗ	ovuz
+ㄘ	ovuc
+ㄙ	ovus
+ㄒ	ovux
+ㄑ	ovuq
+ㄧ	ovuy	2
+丨	ovuy	1
+ㄨ	ovuw
+ㄚ	ovya
+ㄛ	ovyo
+ㄜ	ovye
+ㄧ	ovyi	2
+丨	ovyi	1
+ㄨ	ovyu
+ㄩ	ovyv
+ㄞ	ovyd
+ㄟ	ovyw
+ㄠ	ovyc
+ㄡ	ovyz
+ㄢ	ovyj
+ㄣ	ovyf
+ㄤ	ovyh
+ㄥ	ovyg
+ㄦ	ovyr
+ㄝ	ovyp
+ˇ	ovde
+ˋ	ovdr
+ˊ	ovdy
+˙	ovdu
